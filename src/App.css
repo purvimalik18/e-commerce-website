@@ -1,0 +1,25 @@
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.all-icons{
+    display: flex;
+    width: 17%;
+    justify-content: space-around;
+}
+
+html{
+    background-color: #cfcfcf;
+}
+
+h2{
+    color: white;
+    font-size: 35px;
+}
+
+.icon-size{
+    font-size: 30px;
+}
