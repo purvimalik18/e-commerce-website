@@ -1,0 +1,38 @@
+.about-container{
+    background-color: white;
+    display: flex;
+}
+
+.about-heading{
+    color: black;
+}
+
+h1{
+    text-align: center;
+    color: white !important;
+    background-color: #05383e;
+    margin: 0px;
+    padding: 32px 0px;
+}
+
+.about-container{
+    background-color: white;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding: 10px 221px;
+    justify-content: space-around;
+}
+
+.about-content{
+    width: 43%;
+    transform: translateY(19%);
+}
+
+.read-more-button{
+    height: 35px;
+    width: 124px;
+    border-radius: 0%;
+    background-color: black;
+    color: white;
+}

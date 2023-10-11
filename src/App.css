@@ -3,12 +3,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: white;
+    background-color: #e8e8e8;
+    padding: 1%;
 }
 
 .all-icons{
     display: flex;
     width: 17%;
     justify-content: space-around;
+    color: black;
 }
 
 html{
@@ -16,10 +20,87 @@ html{
 }
 
 h2{
-    color: white;
+    color: white ;
     font-size: 35px;
 }
 
 .icon-size{
     font-size: 30px;
+}
+
+.footer{
+    background-color: #05383e;
+    padding-bottom: 5%;
+}
+
+.footer-head{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5%;
+}
+
+.links{
+    text-align: center;
+    width: 20%;
+    justify-content: space-around;
+    display: flex;
+    margin: 0% 17%;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: space-around;
+    width: 115px;
+    margin: 0px 108px;
+    color: white;
+}
+
+a:-webkit-any-link {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+hr{
+    margin: 1% !important;
+    color: white !important;
+    opacity: 1.25 !important;
+}
+
+.input-group{
+    width: 23% !important;
+}
+
+.btn-outline-secondary{
+    border-radius: 0% !important;
+    background-color: #c63500 !important;
+    color: white !important;
+    margin-bottom: 0% !important;
+}
+
+
+.form-control{
+    border-radius: 0% !important;
+}
+
+.subscribe-input{
+    display: flex;
+    justify-content: center;
+    margin: 38px 0px;
+}
+
+p.newsletter{
+    align-items: center;
+    display: flex;
+    color: white;
+    margin-right: 1%;
+    margin-bottom: 0% !important;
+}
+
+.footer-text{
+    display: flex;
+    color: #ffffff;
+    width: 53%;
+    font-size: 13px;
+    text-align: center;
+    margin: auto;
 }
