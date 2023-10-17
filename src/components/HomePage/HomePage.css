@@ -2,4 +2,115 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #e8e8e8;
 }
+
+.header-text{
+    font-size: 69px;
+    font-weight: 900;
+}
+
+.header-subtext{
+    color: #34cfb9;
+    font-weight: 700;
+}
+
+button.shop-now-button{
+    margin-top: 14%;
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    font-size: 13px;
+    height: 41px;
+    width: 150px;
+    border-color: white;
+    box-shadow: -6px 6px;
+}
+
+.text-bottom{
+    font-size: 22px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+}
+
+.subtext-bottom{
+    color: #34cfb9;
+}
+
+.form-container{
+    justify-content: center;
+    width: 65%;
+    margin: auto;
+    display: flex;
+    background-color: #e8e8e8;
+    padding: 25px;
+}
+
+.form-class{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-box{
+    margin-bottom: 15px;
+    height: 43px;
+    border: none;
+    box-shadow: 0px 0px 2px 2px  #b5b5b5;
+    border-radius: 0px;
+}
+
+.input-box ::placeholder{
+    color: red !important;
+}
+
+.message-box{
+    height: 60px;
+}
+
+.form-submit-button{
+    margin: auto;
+}
+
+.offer-corousel{
+    display: flex;
+    margin: auto;
+    height: 50%;
+    width: 29%;
+}
+.corousel-deal-text-container{
+    background-color: rgb(42, 165, 157);
+    padding: 32px;
+    text-align: center;
+}
+
+.corousel-deal{
+    color: white;
+    font-size: 21px;
+}
+
+.corousel-deal-text{
+    font-size: 20px;
+}
+
+.corousel-container{
+    display: flex;
+    margin: 45px 0px;
+}
+
+/* corousel button not happening*/
+.corousel-indicators button {
+    background-color: black !important;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+}
+
+.corousel-control-prev .corousel-control-next{
+    visibility: hidden !important;
+}
+
+

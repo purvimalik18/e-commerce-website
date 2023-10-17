@@ -3,8 +3,9 @@
     display: flex;
 }
 
-.about-heading{
+h2.about-heading{
     color: black;
+    font-weight: 500 !important;
 }
 
 h1{
