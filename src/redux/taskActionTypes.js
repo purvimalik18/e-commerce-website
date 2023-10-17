@@ -1,0 +1,6 @@
+const COROUSEL = {
+    LOAD: "REQUEST_COROUSEL_DATA",
+    LOAD_SUCCESS: "RECEIVE_COROUSEL_DATA",
+  };
+  
+  export default COROUSEL;
