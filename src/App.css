@@ -19,7 +19,7 @@ html{
     background-color: #cfcfcf;
 }
 
-h2{
+.head{
     color: white ;
     font-size: 35px;
     font-weight: 800 !important;

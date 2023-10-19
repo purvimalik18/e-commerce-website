@@ -40,41 +40,6 @@ button.shop-now-button{
     color: #34cfb9;
 }
 
-.form-container{
-    justify-content: center;
-    width: 65%;
-    margin: auto;
-    display: flex;
-    background-color: #e8e8e8;
-    padding: 25px;
-}
-
-.form-class{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.input-box{
-    margin-bottom: 15px;
-    height: 43px;
-    border: none;
-    box-shadow: 0px 0px 2px 2px  #b5b5b5;
-    border-radius: 0px;
-}
-
-.input-box ::placeholder{
-    color: red !important;
-}
-
-.message-box{
-    height: 60px;
-}
-
-.form-submit-button{
-    margin: auto;
-}
-
 .offer-corousel{
     display: flex;
     margin: auto;
@@ -85,6 +50,7 @@ button.shop-now-button{
     background-color: rgb(42, 165, 157);
     padding: 32px;
     text-align: center;
+    height: 126px;
 }
 
 .corousel-deal{
@@ -101,16 +67,42 @@ button.shop-now-button{
     margin: 45px 0px;
 }
 
-/* corousel button not happening*/
-.corousel-indicators button {
-    background-color: black !important;
-    border-radius: 50%;
-    height: 9px;
-    width: 9px;
-}
-
-.corousel-control-prev .corousel-control-next{
+.carousel-control-prev-icon, .carousel-control-next-icon{
     visibility: hidden !important;
 }
+.carousel-indicators [data-bs-target] {
+    background-color: black !important;
+    height: 8px !important;
+    width: 8px !important;
+    border-radius: 50% !important;
+}
 
+.carousel-indicators .active{
+    background-color: rgb(42, 165, 157) !important;
+}
+
+.trending-categories-container{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 28px 0px;
+}
+
+.featured-brands-container{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding: 25px 0px 9px 0px;
+    border: 2px solid #ccc;
+    box-shadow: 
+        inset 0 0 5px 0 rgba(0, 0, 0, 0.2), /* Inner shadow */
+        0 0 5px 0 rgba(0, 0, 0, 0.2); /* Outer shadow */
+    margin: 35px 2px;
+}
+
+p{
+    font-size: small;
+    margin-bottom: 2px !important;
+    margin-top: 2px !important;
+}
 

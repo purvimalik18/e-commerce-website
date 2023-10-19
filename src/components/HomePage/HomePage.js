@@ -3,13 +3,17 @@ import './HomePage.css';
 import { useEffect } from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import {useDispatch, useSelector} from "react-redux";
-import { requestCorousels, requestTrendingCategories } from "./../../redux/taskActions";
+import { requestCorousels, requestProducts, requestTrendingCategories } from "./../../redux/taskActions";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 function HomePage() {
 
+    const navigate = useNavigate();
+ 
     const corouselState = useSelector((state) => state.task);
     const trendingState = useSelector((state) => state.trendingCategories);
+    const productState = useSelector((state) => state.products);
     const dispatch = useDispatch();
     
     useEffect(() => {
@@ -21,7 +25,6 @@ function HomePage() {
             catch{
             }
         }
-        
         fetchCorouselData();
     }, []);
 
@@ -37,13 +40,22 @@ function HomePage() {
         fetchTrendingCategoriesData();
     }, []);
 
-    console.log(corouselState);
-    console.log(trendingState);
-
+    useEffect(() => {
+        async function fetchProductsData(){
+            try{
+                const json = await axios.get("https://mocki.io/v1/7cb4322e-a80c-4365-8f65-6a01c8a28ae0");
+                dispatch(requestProducts(json.data))
+            }
+            catch{
+            }
+        }
+        fetchProductsData();
+    }, []);
     
     function shopNowClicked(){
-
+        navigate("/product")
     }
+
     return (
         <>
             <div className='home-header-container'>
@@ -53,7 +65,7 @@ function HomePage() {
                         <br></br>
                         FURNITURE <br></br>DESIGN
                     </div>
-                    <button onClick={shopNowClicked} className="shop-now-button">SHOP NOW </button>
+                    <button onClick={shopNowClicked} className="shop-now-button">SHOP NOW &gt;</button>
                 </div>
                 <div>
                     <img src={sofa_image} alt='sofa_image' height="550px"></img>
@@ -63,7 +75,7 @@ function HomePage() {
                 <Carousel className='offer-corousel'>
                     {
                         corouselState.corouselData?.map(el => 
-                            <Carousel.Item interval={1000}>
+                            <Carousel.Item key={el.imageUrl}>
                                 <div className='corousel-container'>
                                     <div className='corousel-deal-text-container'>
                                         <div className='corousel-deal'>
@@ -74,7 +86,7 @@ function HomePage() {
                                         </div>
                                     </div>
                                     <div>
-                                        <img src={el.imageUrl} alt=""></img>
+                                        <img src={el.imageUrl} alt="" height={126}></img>
                                     </div>
                                 </div>
                             </Carousel.Item>
@@ -82,19 +94,29 @@ function HomePage() {
                     }                    
                 </Carousel>
                  <div className='text-bottom'><span className='subtext-bottom'>Trending</span>&nbsp;Categories</div>
+                 <div className='trending-categories-container'>
+                    {
+                        trendingState.trendingStateData?.map(el =>
+                            <div key = {el.itemImage}>
+                                <img src={el.itemImage} alt=""></img>
+                                <p><b>{el.itemType}</b></p>
+                            </div>
+                            )
+                    }
+                 </div>
                  <div className='home-middle-content-container' >
                     <div className='text-bottom'><span className='subtext-bottom'>Featured</span>&nbsp;Brands</div>
-                    <div className='text-bottom'><span className='subtext-bottom'>Contact</span>&nbsp;Us</div>
-                    <div className='form-container'>
-                        <form className='form-class'>
-                            <input type="text" name="name" placeholder='Name' className='input-box'/>
-                            <input type="text" name="email" placeholder='Email' className='input-box'/>
-                            <input type="text" name="phone" placeholder='Phone' className='input-box'/>
-                            <textarea id="textbox" name="message" rows="4" cols="50" className='input-box message-box' placeholder='Message'></textarea>
-                            <button className='read-more-button form-submit-button'>Submit</button>
-                        </form>
+                    <div className='featured-brands-container'>
+                        {
+                            productState.productsData.filter((item, idx) => idx < 4).map(el =>
+                                <div>
+                                    <img src={el.imageUrl} alt="" height={150} width={150}></img>
+                                    <p>{el.itemName}</p>
+                                    <p>{el.sellingPrice}</p>
+                                </div>
+                                )
+                        }
                     </div>
-                    
                  </div>
             </div>
 

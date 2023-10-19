@@ -1,9 +1,10 @@
 import {combineReducers} from "redux";
-import { reducer, trendingReducer } from "./taskReducer";
+import { productsReducer, reducer, trendingReducer } from "./taskReducer";
 
 const rootReducer = combineReducers({
     task: reducer,
-    trendingCategories: trendingReducer
+    trendingCategories: trendingReducer,
+    products: productsReducer
 });
 
 export default rootReducer;

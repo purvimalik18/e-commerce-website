@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import AboutPage from './components/AboutPage/AboutPage';
 import HomePage from './components/HomePage/HomePage';
@@ -12,17 +12,32 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
+import ContactUsPage from './components/ContactUsPage/ContactUsPage';
+import ProductDescriptionPage from './components/ProductDescriptionPage/ProductDescriptionPage';
 
 function App() {
 
   const [navBar, setNavbarState] = useState(false);
+  const navigate = useNavigate();
 
     const toggleDrawer = (open) => () => {
         setNavbarState(open);
       };
 
     function navigateToPages(navItem){
-      console.log(navItem);
+      if(navItem.text === "Home"){
+        navigate('/');
+      }
+      else if(navItem.text === "About"){
+        navigate('/about');
+      }
+      else if(navItem.text === "Product"){
+        navigate('/product');
+      }
+      else if(navItem.text === "Contact us"){
+        navigate('/contactus');
+      }
+
     }
 
     const list = () => (
@@ -61,7 +76,7 @@ function App() {
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet"></link>
     </header>
       <div className="header">
-        <h2>ECOMMERCE</h2>
+        <div className='head'>ECOMMERCE</div>
         <div className="all-icons">
           <i className="fa fa-regular fa-user icon-size"></i>
           <i className="fa fa-regular fa-heart icon-size"></i>
@@ -74,6 +89,8 @@ function App() {
         <Route path="/" element={<HomePage/>} />
          <Route path="/about" element={<AboutPage/>} />
          <Route path="/product" element={<ProductPage/>} />
+         <Route path="/contactus" element={<ContactUsPage/>} />
+         <Route path="/productDescription" element={<ProductDescriptionPage/>} />
        </Routes>
        <div className="footer">
         <div className='footer-head'>
