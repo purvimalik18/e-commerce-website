@@ -1,0 +1,93 @@
+.product-description-container{
+    display: flex;
+    justify-content: center;
+    width: 69%;
+    margin: auto;
+    padding: 6% 0px;
+    margin-bottom: -6%;
+}
+
+.product-price-details{
+    display: flex ;
+    padding: 8px 0px;
+}
+
+hr{
+    color: #dadada !important;
+    height: 1px;
+}
+
+.product-mrp{
+    font-size: 23px;
+    color: #8a8787 !important;
+    font-weight: 100;
+}
+
+.product-sp{
+    font-size: 23px;
+}
+
+.no-of-reviews{
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.stars{
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-color: yellow;
+}
+
+.checked{
+    color: #e8e86e;
+}
+
+.product-review-para{
+    margin: 19px 0px !important;
+    color: #898989 !important;
+}
+
+.add-to-cart-item{
+    border: 1px solid grey;
+    margin-right: 20px;
+    padding: 6px 32px 6px 9px;
+    margin-left: 2%;
+}
+
+h3{
+    padding-top: 10%;
+}
+
+.MuiTab-wrapper{
+    text-transform: capitalize;
+    font-size: large;
+}
+
+.MuiTabs-flexContainer{
+    background: white;
+    color: black;
+}
+.MuiTab-textColorInherit{
+    background: #eaeaea;
+    text-transform:none;
+}
+
+.MuiTab-textColorInherit.Mui-selected{
+    background-color: #34cfb9 !important;
+    color: white !important;
+    text-decoration: none;
+    border-bottom: none !important;
+}
+
+.MuiBox-root-1 {
+    width: 70%;
+    margin: auto;
+}
+
+.PrivateTabIndicator-colorSecondary-4 {
+    display: none;
+}
+

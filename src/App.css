@@ -23,6 +23,7 @@ html{
     color: white ;
     font-size: 35px;
     font-weight: 800 !important;
+    cursor:pointer;
 }
 
 .icon-size{
@@ -104,42 +105,4 @@ p.newsletter{
     font-size: 13px;
     text-align: center;
     margin: auto;
-}
-
-.css-1hskriy {
-    margin: 9% 2% !important;
-}
-
-.css-1e6y48t-MuiButtonBase-root-MuiButton-root{
-    color: white !important;
-    background-color: black !important;
-    min-width: 13px !important;
-    border-radius: 0px !important;
-
-}
-
-.css-1nxmd3h-MuiListItem-root :hover{
-    background-color: rgb(42, 165, 157);
-    color: white;
-}
-
-.nav-back-button{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.css-10hburv-MuiTypography-root {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 6px;
-    margin-left: 13px;
-}
-
-.css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
-    width: 19%;
-}
-
-.css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root{
-    margin: 0px !important;
-    padding: 0px !important;
 }

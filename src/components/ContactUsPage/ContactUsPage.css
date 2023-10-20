@@ -14,15 +14,12 @@
 }
 
 .input-box{
-    margin-bottom: 15px;
+    margin-top: 15px;
     height: 43px;
     border: none;
     box-shadow: 0px 0px 2px 2px  #b5b5b5;
     border-radius: 0px;
-}
-
-.input-box ::placeholder{
-    color: red !important;
+    width: 100%;
 }
 
 .message-box{
@@ -31,4 +28,18 @@
 
 .form-submit-button{
     margin: auto;
+    justify-content: center;
+    display: flex;
+    margin-top: 3%;
+
 }
+.contact-form{
+    width: 100%;
+}
+
+.error{
+    color: red;
+    font-size: 12px;
+    
+}
+

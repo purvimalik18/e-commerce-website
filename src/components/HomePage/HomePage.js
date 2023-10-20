@@ -109,7 +109,7 @@ function HomePage() {
                     <div className='featured-brands-container'>
                         {
                             productState.productsData.filter((item, idx) => idx < 4).map(el =>
-                                <div>
+                                <div key={el.imageUrl}>
                                     <img src={el.imageUrl} alt="" height={150} width={150}></img>
                                     <p>{el.itemName}</p>
                                     <p>{el.sellingPrice}</p>

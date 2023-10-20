@@ -36,7 +36,7 @@ function ProductPage(){
             <div className="all-products-container">
                 {
                     productState.productsData.map(el =>
-                        <div className="all-products-containerbox" >
+                        <div className="all-products-containerbox" key={el.imageUrl}>
                             <div className="product">
                                 <img src={el.imageUrl} alt="" height={250} width={250}></img>
                                 <div className="middle">

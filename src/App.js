@@ -1,82 +1,36 @@
 import './App.css';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
-import { useState } from "react";
 import AboutPage from './components/AboutPage/AboutPage';
 import HomePage from './components/HomePage/HomePage';
 import ProductPage from './components/ProductPage/ProductPage';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import ContactUsPage from './components/ContactUsPage/ContactUsPage';
 import ProductDescriptionPage from './components/ProductDescriptionPage/ProductDescriptionPage';
+import SideNavMenu from './components/SideNavMenu/SideNavMenu';
+import { useState } from 'react';
 
 function App() {
 
-  const [navBar, setNavbarState] = useState(false);
   const navigate = useNavigate();
+  const [navBar, setNavbarState] = useState(false);
 
-    const toggleDrawer = (open) => () => {
-        setNavbarState(open);
-      };
+  function navigateToPages(){
+    navigate('/');
+  }
 
-    function navigateToPages(navItem){
-      if(navItem.text === "Home"){
-        navigate('/');
-      }
-      else if(navItem.text === "About"){
-        navigate('/about');
-      }
-      else if(navItem.text === "Product"){
-        navigate('/product');
-      }
-      else if(navItem.text === "Contact us"){
-        navigate('/contactus');
-      }
+  const toggleDrawer = (open) => () => {
+    setNavbarState(open);
+    console.log(navBar);
+  };
 
-    }
 
-    const list = () => (
-        <Box
-          sx={{ width: 250 }}
-          role="presentation"
-          onKeyDown={toggleDrawer( false)}
-        >
-
-          <div className='nav-back-button'>
-            <Button onClick={toggleDrawer(false)}><ArrowBackIcon></ArrowBackIcon></Button>
-          </div>
-          
-          <List>
-            {['Home', 'About', 'Product', 'Contact us'].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton >
-                  <ListItemText primary={text} onClick={() => navigateToPages({text})}/>
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
-        </Box>
-      );
   return (
    <>
-   <div>
-          <Drawer
-            open={navBar}
-            onClose={toggleDrawer(false)}
-          >
-            {list()}
-          </Drawer>
-    </div>
-   <header>
+{    {navBar} ? <SideNavMenu navShow = {navBar}></SideNavMenu> : null
+}   <header>
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet"></link>
     </header>
       <div className="header">
-        <div className='head'>ECOMMERCE</div>
+        <div className='head' onClick={()=> navigateToPages()}>ECOMMERCE</div>
         <div className="all-icons">
           <i className="fa fa-regular fa-user icon-size"></i>
           <i className="fa fa-regular fa-heart icon-size"></i>
