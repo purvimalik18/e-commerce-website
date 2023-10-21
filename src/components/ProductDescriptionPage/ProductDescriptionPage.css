@@ -55,6 +55,11 @@ hr{
     margin-right: 20px;
     padding: 6px 32px 6px 9px;
     margin-left: 2%;
+    background-color: #dadada !important;
+}
+
+.add-to-cart{
+    background-color: #8a8787;
 }
 
 h3{
@@ -91,3 +96,30 @@ h3{
     display: none;
 }
 
+.description-container{
+    color: grey;
+    padding: 2rem 0;
+}
+
+h5{
+    padding: 2rem 0;
+}
+
+.profile-image{
+    border-radius: 50%;
+}
+.review{
+    display: flex;
+}
+
+.review-content{
+    padding: 0 3rem;
+}
+
+p{
+    padding: 0 !important;
+}
+
+.review-para{
+    padding: 17px 0 !important;
+}

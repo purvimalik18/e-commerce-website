@@ -7,7 +7,10 @@ import ContactUsPage from './components/ContactUsPage/ContactUsPage';
 import ProductDescriptionPage from './components/ProductDescriptionPage/ProductDescriptionPage';
 import SideNavMenu from './components/SideNavMenu/SideNavMenu';
 import { useState } from 'react';
-import { IconButton } from '@material-ui/core';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function App() {
 
@@ -23,11 +26,10 @@ function App() {
     setNavbarState(open);
   };
 
-  console.log(navBar);
   return (
    <>
-{    navBar ? <SideNavMenu navShow={navBar}/> : null
-}   <header>
+{    navBar ? <SideNavMenu navShow={navBar}/> : null }
+   <header>
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet"></link>
     </header>
       <div className="header">
@@ -35,9 +37,8 @@ function App() {
         <div className="all-icons">
           <i className="fa fa-regular fa-user icon-size"></i>
           <i className="fa fa-regular fa-heart icon-size"></i>
-          {/* <span className='icon-size'>🛒</span> */}
-          <i className="fa fa-solid fa-cart-shopping icon-size"></i>
-          <IconButton onClick={() => toggleDrawer(true)}><i className="fa fa-solid fa-bars icon-size" ></i></IconButton>
+          <ShoppingCartIcon/>
+          <i className="fa fa-solid fa-bars icon-size" onClick={() => toggleDrawer(true)}></i>
         </div>
       </div>
         <Routes>
@@ -56,9 +57,9 @@ function App() {
             <Link to="/contactus">Contact Us</Link>
           </div>
           <div className='social-icons'>
-            <i className="fa-brands fa-twitter"></i>
-            <i className="fa-brands fa-instagram"></i>
-            <i className=" fa-brands fa-linkedin-in"></i>
+            <TwitterIcon/>
+            <InstagramIcon />
+            <LinkedInIcon/>
           </div>
         </div>
         <hr></hr>

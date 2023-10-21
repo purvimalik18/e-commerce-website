@@ -41,7 +41,7 @@ function ProductPage(){
                             <div className="product">
                                 <img src={el.imageUrl} alt="" height={250} width={250}></img>
                                 <div className="middle">
-                                    <Button className="add-to-cart-button">+ ADD TO CART</Button>
+                                    <input type="button" className="add-to-cart-button" value="+ ADD TO CART"/>
                                 </div>
                             </div>
                             <div className="product-description" onClick={() => navigateToProductDescriptionPage(el)}>

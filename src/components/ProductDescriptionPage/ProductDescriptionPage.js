@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import './ProductDescriptionPage.css';
 import { Tabs, Tab, AppBar, Box, Typography } from "@material-ui/core";
 import { useState } from 'react';
+import profile_img from '../../assets/Images/profile.png';
 
 
 function ProductDescriptionPage(){
@@ -63,7 +64,7 @@ function ProductDescriptionPage(){
                         </Tabs>
                     </AppBar>
                     <Panel value={index} index={0}>
-                        <div>
+                        <div className='description-container'>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac elementum 
                                 elit. Morbi eu arcu ipsum. Aliquam lobortis accumsan quam ac convallis. Fusce 
                                 elit mauris, aliquet at odio vel, convallis vehicula nisi. Morbi vitae porttitor
@@ -79,10 +80,40 @@ function ProductDescriptionPage(){
                         </div>
                     </Panel>
                     <Panel value={index} index={1}>
-                        <h4>Review(2)</h4>
-                        {
-                            
-                        }
+                        <h5>Review(2)</h5>                    
+                        <div>
+                            <div className='review'>
+                                <img src={profile_img} alt='' height={108} width={116} className="profile-image"/>
+                                <div className='review-content'>
+                                    <h6><b>Ravi</b></h6>
+                                    <p>July 23, 2019 | Reply</p>
+                                    <p className='stars'>
+                                    <span className="fa fa-star checked"></span>
+                                    <span className="fa fa-star checked"></span>
+                                    <span className="fa fa-star checked"></span>
+                                    <span className="fa fa-star" checked></span>
+                                    <span className="fa fa-star"></span>
+                                    </p>
+                                    <p className='review-para'>This is hands down the most comfortable office chair. Unfortunately, it doesn’t actually exist in the wild. We dismantled a Leap and Amia and combined them to create the “Lamia,” which uses the Leap frame and Amia seat.</p>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div className='review'>
+                                <img src={profile_img} alt='' height={108} width={116} className="profile-image"/>
+                                <div className='review-content'>
+                                    <h6><b>Ravi</b></h6>
+                                    <p>July 23, 2019 | Reply</p>
+                                    <p className='stars'>
+                                    <span className="fa fa-star checked"></span>
+                                    <span className="fa fa-star checked"></span>
+                                    <span className="fa fa-star checked"></span>
+                                    <span className="fa fa-star" checked></span>
+                                    <span className="fa fa-star"></span>
+                                    </p>
+                                    <p className='review-para'>This is hands down the most comfortable office chair. Unfortunately, it doesn’t actually exist in the wild. We dismantled a Leap and Amia and combined them to create the “Lamia,” which uses the Leap frame and Amia seat.</p>
+                                </div>
+                            </div>
+                        </div>
                     </Panel>
                 </Box>
             </div>
