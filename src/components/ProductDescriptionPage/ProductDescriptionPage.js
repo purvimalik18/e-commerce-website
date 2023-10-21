@@ -79,7 +79,7 @@ function ProductDescriptionPage(){
                         </div>
                     </Panel>
                     <Panel value={index} index={1}>
-                        Review(2)
+                        <h4>Review(2)</h4>
                         {
                             
                         }

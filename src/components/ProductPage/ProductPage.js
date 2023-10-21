@@ -5,6 +5,7 @@ import { requestProducts } from "../../redux/taskActions";
 import './ProductPage.css';
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
+import { Grid } from "@material-ui/core";
 
 function ProductPage(){
 
@@ -33,10 +34,10 @@ function ProductPage(){
     return(
         <>
             <h1>Our Product</h1>
-            <div className="all-products-container">
+            <Grid container spacing={2} className="all-products-container">
                 {
                     productState.productsData.map(el =>
-                        <div className="all-products-containerbox" key={el.imageUrl}>
+                        <Grid item xs={4} className="all-products-containerbox" key={el.imageUrl}>
                             <div className="product">
                                 <img src={el.imageUrl} alt="" height={250} width={250}></img>
                                 <div className="middle">
@@ -50,11 +51,11 @@ function ProductPage(){
                                 </div>
                                 <div className="product-name">{el.itemName}</div>
                             </div>
-                        </div>
+                        </Grid>
                         
                         )
                 }
-            </div>
+            </Grid>
         </>
     )
 

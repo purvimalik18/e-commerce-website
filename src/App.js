@@ -7,6 +7,7 @@ import ContactUsPage from './components/ContactUsPage/ContactUsPage';
 import ProductDescriptionPage from './components/ProductDescriptionPage/ProductDescriptionPage';
 import SideNavMenu from './components/SideNavMenu/SideNavMenu';
 import { useState } from 'react';
+import { IconButton } from '@material-ui/core';
 
 function App() {
 
@@ -17,15 +18,15 @@ function App() {
     navigate('/');
   }
 
-  const toggleDrawer = (open) => () => {
+  const toggleDrawer = (open) => {
+    console.log("jkl" + open)
     setNavbarState(open);
-    console.log(navBar);
   };
 
-
+  console.log(navBar);
   return (
    <>
-{    {navBar} ? <SideNavMenu navShow = {navBar}></SideNavMenu> : null
+{    navBar ? <SideNavMenu navShow={navBar}/> : null
 }   <header>
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet"></link>
     </header>
@@ -35,8 +36,8 @@ function App() {
           <i className="fa fa-regular fa-user icon-size"></i>
           <i className="fa fa-regular fa-heart icon-size"></i>
           {/* <span className='icon-size'>🛒</span> */}
-          <i className="fab fab-solid fab-cart-shopping icon-size"></i>
-          <i className="fa fa-solid fa-bars icon-size" onClick={toggleDrawer(true)}></i>
+          <i className="fa fa-solid fa-cart-shopping icon-size"></i>
+          <IconButton onClick={() => toggleDrawer(true)}><i className="fa fa-solid fa-bars icon-size" ></i></IconButton>
         </div>
       </div>
         <Routes>
