@@ -13,7 +13,6 @@ function SideNavMenu({navShow}) {
   
       const toggleDrawer = (open) => () => {
           setNavbarState(open);
-          console.log("side" + navBar)
         };
       function navigateToPages(navItem){
         if(navItem.text === "Home"){
@@ -52,6 +51,7 @@ function SideNavMenu({navShow}) {
             </List>
           </Box>
         );
+      console.log(navBar);
     return(
         <>
             <div>

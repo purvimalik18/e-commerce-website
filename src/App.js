@@ -22,13 +22,12 @@ function App() {
   }
 
   const toggleDrawer = (open) => {
-    console.log("jkl" + open)
     setNavbarState(open);
   };
-
+  console.log(navBar + "app.js")
   return (
    <>
-{    navBar ? <SideNavMenu navShow={navBar}/> : null }
+    {    navBar ? <SideNavMenu navShow={navBar}/> : null } 
    <header>
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet"></link>
     </header>

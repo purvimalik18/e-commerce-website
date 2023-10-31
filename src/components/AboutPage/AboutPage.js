@@ -1,7 +1,7 @@
 import table_image from '../../assets/Images/about.png';
 import './AboutPage.css'
 
-function HomePage() {
+function AboutPage() {
     function readMoreClick(){
 
     }
@@ -24,4 +24,4 @@ function HomePage() {
     );
 }
 
-export default HomePage;
+export default AboutPage;
